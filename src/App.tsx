@@ -10,11 +10,11 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { albums, ellipse, person, square } from 'ionicons/icons';
+import { albums, ellipse, people, person, square } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
-
+import AddUser from './pages/addUser';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -33,12 +33,16 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import addUser from './pages/addUser';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+        <Route path="/addUser" component={addUser} >
+            <AddUser />
+        </Route>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
@@ -60,8 +64,8 @@ const App: React.FC = () => (
             <IonLabel>Occurrences</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonIcon icon={people} />
+            <IonLabel>Utilizadores</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={person} />
@@ -69,6 +73,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      
     </IonReactRouter>
   </IonApp>
 );

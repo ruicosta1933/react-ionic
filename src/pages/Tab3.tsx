@@ -7,10 +7,10 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-      <IonToolbar>
-      <IonToolbar>
-          <IonTitle>Profile</IonTitle>
-        </IonToolbar>
+      		<IonToolbar>
+				<IonToolbar>
+					<IonTitle>Profile</IonTitle>
+					</IonToolbar>
 
 					<IonButtons slot="end">
 
