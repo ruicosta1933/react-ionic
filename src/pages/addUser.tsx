@@ -1,10 +1,9 @@
-import { IonBackButton, IonButton, IonButtons, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonBackButton, IonButton, IonButtons, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonTitle, IonToolbar, useIonAlert } from "@ionic/react";
 import React, { useState } from "react";
 
 
 const AddUser: React.FC = () => {
-    const [text, setText] = useState<string>();
-  
+    const [present] = useIonAlert();
     return (
         <IonPage>
             <IonHeader>
@@ -14,30 +13,42 @@ const AddUser: React.FC = () => {
                     </IonToolbar>
 
                     <IonButtons slot="start">
-                        <IonBackButton defaultHref="" />
+                        <IonBackButton defaultHref="/tab2" />
                     </IonButtons>
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
+                <IonGrid>
                 <IonList>
                     <IonItem>
-                        <IonInput value={text} placeholder="Nome" onIonChange={e => setText(e.detail.value!)}></IonInput>
+                        <IonInput placeholder="Username" required></IonInput>
                     </IonItem>
                     <IonItem>
-                        <IonInput placeholder="Password" disabled ></IonInput>
+                        <IonInput placeholder="Password" type="password"  required></IonInput>
                     </IonItem>
-                    <IonButton expand="block">Validar Autenticação</IonButton>
+                    <IonButton expand="block" onClick={() =>
+                              present({
+                                cssClass: 'my-css',
+                                header: 'Validar Autenticação',
+                                message: 'Autenticação realizada com sucesso! Os dados de acesso ao servidor são válidos.',
+                                buttons: [
+                                  { text: 'OK', handler: (d) => console.log('ok pressed') },
+                                ],
+                                onDidDismiss: (e) => console.log('did dismiss'),
+                              })
+                            }>Validar Autenticação</IonButton>
                 </IonList>
 
                 <IonList>
                     <IonItem>
-                        <IonInput value={text} placeholder="Nome" onIonChange={e => setText(e.detail.value!)}></IonInput>
+                        <IonInput placeholder="Name"></IonInput>
                     </IonItem>
                     <IonItem>
-                        <IonInput placeholder="PIN de Acesso" disabled ></IonInput>
+                        <IonInput placeholder="PIN de Acesso" type="password" ></IonInput>
                     </IonItem>
                     <IonButton expand="block">Guardar</IonButton>
                 </IonList>
+                </IonGrid>
             </IonContent>
         </IonPage>
     );
