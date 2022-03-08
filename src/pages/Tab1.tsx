@@ -1,5 +1,5 @@
 import { IonAvatar, IonButton, IonChip, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { eye, eyeOff } from 'ionicons/icons';
+import { construct, eye, eyeOff, trash } from 'ionicons/icons';
 import { useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
@@ -26,7 +26,7 @@ const Tab1: React.FC = () => {
         <IonList>       
            <IonItem onClick={() => setCheck(!check)}>
               <IonAvatar slot="start">
-                  <img src="https://static.remove.bg/remove-bg-web/59c96072ccf69a79c0e6dd85a2eac05ceb4d0784/assets/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"/>
+                  <img src="https://cdn.icon-icons.com/icons2/2715/PNG/512/warning_icon_172115.png"/>
               </IonAvatar>
               <IonLabel>
                 <h2>Occurence</h2>
@@ -35,10 +35,16 @@ const Tab1: React.FC = () => {
               <IonButton fill="default" color="dark" >
               { check ? <IonIcon icon={eye} /> : <IonIcon icon={eyeOff} /> }
                 </IonButton>
+                <IonButton fill="default" color="dark" >
+              <IonIcon icon={construct} />
+                </IonButton>
+                <IonButton fill="default" color="dark" >
+              <IonIcon icon={trash} />
+                </IonButton>
             </IonItem>
         <IonItem onClick={() => setCheck1(!check1)}>
           <IonAvatar slot="start">
-              <img src="https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/result.jpeg"/>
+              <img src="https://static.thenounproject.com/png/61749-200.png"/>
           </IonAvatar>
           <IonLabel>
             <h2>Occurence 2</h2>
@@ -47,6 +53,12 @@ const Tab1: React.FC = () => {
          <IonButton fill="default" color="dark" >
             { check1 ? <IonIcon icon={eye} /> : <IonIcon icon={eyeOff} /> }
            </IonButton>
+           <IonButton fill="default" color="dark" >
+              <IonIcon icon={construct} />
+                </IonButton>
+                <IonButton fill="default" color="dark" >
+              <IonIcon icon={trash} />
+                </IonButton>
         </IonItem>
         </IonList>
 
