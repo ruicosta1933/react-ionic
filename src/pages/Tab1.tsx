@@ -22,15 +22,14 @@ const Tab1: React.FC = () => {
             <IonTitle size="large">Occurrences</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
         <IonList>       
            <IonItem onClick={() => setCheck(!check)}>
               <IonAvatar slot="start">
                   <img src="https://cdn.icon-icons.com/icons2/2715/PNG/512/warning_icon_172115.png"/>
               </IonAvatar>
               <IonLabel>
-                <h2>Occurence</h2>
-                <p>Title: Titulo</p>
+                <h2>Avaria nos Sanitarios</h2>
+                <p>Maria Fernandes: 05/03/2022</p>
               </IonLabel>
               <IonButton fill="default" color="dark" >
               { check ? <IonIcon icon={eye} /> : <IonIcon icon={eyeOff} /> }
@@ -47,8 +46,8 @@ const Tab1: React.FC = () => {
               <img src="https://static.thenounproject.com/png/61749-200.png"/>
           </IonAvatar>
           <IonLabel>
-            <h2>Occurence 2</h2>
-            <p>Title: Titulo 2</p>
+            <h2>Janelas partidas no Pavilhão</h2>
+            <p>Ramiro Torres: 17/01/2022</p>
           </IonLabel>
          <IonButton fill="default" color="dark" >
             { check1 ? <IonIcon icon={eye} /> : <IonIcon icon={eyeOff} /> }
