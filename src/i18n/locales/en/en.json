@@ -1,6 +1,11 @@
 {
-    "translation":{
-        "title": "titless",
-        "name": "John Doe"
+    "translation": {
+      "Title": "Profile",
+      "Edit": "Edit",
+      "Description" : "Description",
+      "Text": "The minister of pools is the one person that ministrates pools!",
+      "Occurrences": "Occurrences",
+      "Responded": "Responded",
+      "Latest": "View latest occurences reported"
     }
 }

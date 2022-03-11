@@ -1,6 +1,11 @@
 {
-    "translation":{
-        "title": "Titulo",
-        "name": "Rui Faria"
-    }
+    "translation": {
+        "Title": "Perfil",
+        "Edit": "Editar",
+        "Description" : "Descrição",
+        "Text": "O Ministro das Piscinas é a pessoa que ministra as piscinas!",
+        "Occurrences": "Ocurrências",
+        "Responded": "Respostas",
+        "Latest": "Veja as últimas ocurrências inseridas"
+      }
 }

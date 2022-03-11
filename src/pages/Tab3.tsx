@@ -67,12 +67,12 @@ const Tab3: React.FC = () => {
 											</IonRow>
                       							<IonButton color="primary" expand="block" fill="outline">
 												<IonIcon icon={ personAddOutline } size="small" />&nbsp;
-												Edit
+												{t('Edit')}
 											</IonButton>
 											<IonItem>
 												<IonSelect value={localStorage.getItem('lgn')} okText="Okay" cancelText="Dismiss" onIonChange={e => change(e)} >
 													<IonSelectOption value="en" defaultChecked>English</IonSelectOption>
-													<IonSelectOption value="fr">Françê</IonSelectOption>
+													<IonSelectOption value="pt">Português</IonSelectOption>
 												</IonSelect>
 											</IonItem>
 										</IonCol>
@@ -88,12 +88,12 @@ const Tab3: React.FC = () => {
 								<IonCardHeader>
 									<IonRow >
 										<IonIcon />
-										<IonCardTitle>Description</IonCardTitle>
+										<IonCardTitle>{t('Description')}</IonCardTitle>
 									</IonRow>
 								</IonCardHeader>
 								<IonCardContent>
 									<IonText>
-										<p>The minister of pools is the one person that ministrates pools!</p>
+										<p>{t('Text')}</p>
 									</IonText>
 								</IonCardContent>
 							</IonCard>
@@ -106,7 +106,7 @@ const Tab3: React.FC = () => {
 								<IonCardContent>
 									<IonIcon icon={ albumsOutline } />
 									<IonCardTitle>147</IonCardTitle>
-									<IonCardSubtitle>Occurences</IonCardSubtitle>
+									<IonCardSubtitle>{t('Occurrences')}</IonCardSubtitle>
 								</IonCardContent>
 							</IonCard>
 						</IonCol>
@@ -116,7 +116,7 @@ const Tab3: React.FC = () => {
 								<IonCardContent>
 									<IonIcon icon={ bookmarkOutline } />
 									<IonCardTitle>63</IonCardTitle>
-									<IonCardSubtitle>Responded</IonCardSubtitle>
+									<IonCardSubtitle>{t('Responded')}</IonCardSubtitle>
 								</IonCardContent>
 							</IonCard>
 						</IonCol>
@@ -127,7 +127,7 @@ const Tab3: React.FC = () => {
 							<IonCard >
 								<IonCardContent>
 									<IonRow className="ion-justify-content-between">
-										<IonCardSubtitle>View latest occurences reported</IonCardSubtitle>
+										<IonCardSubtitle>{t('Latest')}</IonCardSubtitle>
 										<IonIcon icon={ arrowForward } />
 									</IonRow>
 								</IonCardContent>
