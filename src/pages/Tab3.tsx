@@ -1,15 +1,38 @@
-import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonPage, IonRow, IonText, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonPage, IonRow, IonSelect, IonSelectOption, IonText, IonTitle, IonToolbar } from '@ionic/react';
+
 import { albums, albumsOutline, arrowBackOutline, arrowForward, bookmarkOutline, chatboxEllipsesOutline, ellipsisHorizontal, imageOutline, personAddOutline } from 'ionicons/icons';
+import { useEffect, useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
+import { useTranslation } from 'react-i18next';
 
 const Tab3: React.FC = () => {
+	const { t, i18n } = useTranslation();
+	const [translate, setTranslate] = useState("en");
+
+  
+  
+	useEffect(() => {
+		console.log(i18n)
+		if(localStorage.getItem('lgn')===null){
+			localStorage.setItem("lgn", "en");
+			console.log(localStorage.getItem('lgn'))
+		  }
+	},[localStorage.getItem('lgn')])
+
+	function change(e: any){
+		localStorage.setItem("lgn", e.detail.value);
+		window.location.reload()
+		console.log(localStorage.getItem('lgn'))
+		console.log(i18n)
+	}
+
   return (
     <IonPage>
       <IonHeader>
       		<IonToolbar>
 				<IonToolbar>
-					<IonTitle>Profile</IonTitle>
+					<IonTitle>{t('Title')}</IonTitle>
 					</IonToolbar>
 
 					<IonButtons slot="end">
@@ -18,6 +41,7 @@ const Tab3: React.FC = () => {
 							<IonIcon icon={ ellipsisHorizontal } />
 						</IonButton>
 					</IonButtons>
+						
 				</IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -37,14 +61,20 @@ const Tab3: React.FC = () => {
 														<p>Rui Faria</p>
 													</IonText>
 													<IonText color="medium">
-														<p>Minister of Pools</p>
+														<p></p>
 													</IonText>
 												</IonCol>
 											</IonRow>
-                      <IonButton color="primary" expand="block" fill="outline">
+                      							<IonButton color="primary" expand="block" fill="outline">
 												<IonIcon icon={ personAddOutline } size="small" />&nbsp;
 												Edit
 											</IonButton>
+											<IonItem>
+												<IonSelect value={localStorage.getItem('lgn')} okText="Okay" cancelText="Dismiss" onIonChange={e => change(e)} >
+													<IonSelectOption value="en" defaultChecked>English</IonSelectOption>
+													<IonSelectOption value="fr">Françê</IonSelectOption>
+												</IonSelect>
+											</IonItem>
 										</IonCol>
 									</IonRow>
 								</IonCardContent>

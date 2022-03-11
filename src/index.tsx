@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+import './i18n';
 ReactDOM.render(
   <React.StrictMode>
     <App />

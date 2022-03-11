@@ -35,10 +35,14 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import addUser from './pages/addUser';
 
+import {useTranslation} from 'react-i18next';
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
+const App: React.FC = () => {
+
+  
+  return(
+<IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
@@ -76,6 +80,8 @@ const App: React.FC = () => (
       
     </IonReactRouter>
   </IonApp>
-);
+  )
+  
+};
 
 export default App;
