@@ -15,6 +15,8 @@ import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import AddUser from './pages/addUser';
+import Login from './pages/login';
+import Register from './pages/register';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -44,34 +46,45 @@ const App: React.FC = () => {
   return(
 <IonApp>
     <IonReactRouter>
+      
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
+        
+        <Route path="/login">
+          <Login />
+        </Route>
+
+        <Route exact path="/">
+            <Redirect to="/login" />
+          </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+          <Route exact path="/occurrences">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/users">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route path="/profile">
             <Tab3 />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/tab1" />
           </Route>
           <Route path="/addUser" exact >
             <AddUser />
         </Route>
+        
         </IonRouterOutlet>
+
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="tab1" href="/occurrences">
             <IonIcon icon={albums} />
             <IonLabel>Occurrences</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="tab2" href="/users">
             <IonIcon icon={people} />
             <IonLabel>Utilizadores</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="tab3" href="/profile">
             <IonIcon icon={person} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
