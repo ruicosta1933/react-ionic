@@ -1,11 +1,34 @@
 {
     "translation": {
-      "Title": "Profile",
-      "Edit": "Edit",
-      "Description" : "Description",
-      "Text": "The minister of pools is the one person that ministrates pools!",
-      "Occurrences": "Occurrences",
-      "Responded": "Responded",
-      "Latest": "View latest occurences reported"
+      "profile":{
+        "Title": "Profile",
+        "Edit": "Edit",
+        "Description" : "Description",
+        "Text": "The minister of pools is the one person that ministrates pools!",
+        "Occurrences": "Occurrences",
+        "Responded": "Responded",
+        "Latest": "View latest occurences reported"
+      },
+      "tabs":{
+        "Occurrences": "Occurrences",
+        "Users": "Users",
+        "Profile": "Profile"
+      },
+      "occurrences":{
+        "Title": "Occurrences"
+      },
+      "users":{
+        "Title": "User Management",
+        "AddUser": "Add Users",
+        "add":{
+          "Title": "Add User",
+          "Username": "Username",
+          "Password": "Password",
+          "Validate": "Validate Autentication",
+          "Name": "Name",
+          "PIN": "Access PIN",
+          "Save": "Save"
+        }
+      }
     }
 }

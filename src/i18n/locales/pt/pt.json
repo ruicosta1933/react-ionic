@@ -1,5 +1,6 @@
 {
     "translation": {
+      "profile":{
         "Title": "Perfil",
         "Edit": "Editar",
         "Description" : "Descrição",
@@ -7,5 +8,27 @@
         "Occurrences": "Ocurrências",
         "Responded": "Respostas",
         "Latest": "Veja as últimas ocurrências inseridas"
+      },
+      "tabs":{
+        "Occurrences": "Ocurrências",
+        "Users": "Utilizadores",
+        "Profile": "Perfil"
+      },
+      "occurrences":{
+        "Title": "Ocurrências"
+      },
+      "users":{
+        "Title": "Gestão de Utilizadores",
+        "AddUser": "Adicionar utilizadores",
+        "add":{
+          "Title": "Adicionar utilizador",
+          "Username": "Nome de Utilizador",
+          "Password": "Palavra-passe",
+          "Validate": "Validar Autenticação",
+          "Name": "Nome",
+          "PIN": "PIN de Acesso",
+          "Save": "Guardar"
+        }
       }
+    }
 }

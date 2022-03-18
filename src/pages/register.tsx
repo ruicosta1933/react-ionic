@@ -1,4 +1,4 @@
-import { IonButton, IonCard, IonCardContent, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { IonButton, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
 import { personAdd } from "ionicons/icons"
 import { useEffect, useState } from "react"
 
@@ -31,21 +31,10 @@ const Register: React.FC = () => {
                         </IonItem>
                         <IonButton  expand="block">Registe</IonButton>
                     </IonList>
+                            <IonRow className="ion-justify-content-between">
+                                <IonCardSubtitle>Já tem conta ? <a href="/login">Entre aqui !</a></IonCardSubtitle>
+                            </IonRow>
                 </IonGrid>
-                <IonRow >
-						<IonCol size="12">
-							<IonCard >
-								<IonCardContent>
-									<IonRow className="ion-justify-content-between">
-										<IonCardTitle>Já tem conta ?</IonCardTitle>
-                                        <IonButton href='/login'>
-                                            <IonIcon icon={ personAdd } />
-                                        </IonButton>
-									</IonRow>
-								</IonCardContent>
-							</IonCard>
-						</IonCol>
-					</IonRow>
             </IonContent>
         </IonPage>
     )

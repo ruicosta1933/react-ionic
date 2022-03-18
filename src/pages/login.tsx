@@ -1,4 +1,4 @@
-import { IonButton, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { IonButton, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
 import { arrowForward, personAdd } from "ionicons/icons"
 import { useEffect, useState } from "react"
 
@@ -28,21 +28,12 @@ const Login: React.FC = () => {
                         </IonItem>
                             <IonButton  expand="block">Login</IonButton>
                     </IonList>
+                    <IonRow className="ion-justify-content-between">
+                            <IonCardSubtitle>Ainda não tem conta ? <a href="/register" >Registe-se</a></IonCardSubtitle>
+                    </IonRow>
                 </IonGrid>
-                <IonRow >
-						<IonCol size="12">
-							<IonCard >
-								<IonCardContent>
-									<IonRow className="ion-justify-content-between">
-										<IonCardTitle>Ainda não tem conta ?</IonCardTitle>
-                                        <IonButton href='/register'>
-                                            <IonIcon icon={ personAdd } />
-                                        </IonButton>
-									</IonRow>
-								</IonCardContent>
-							</IonCard>
-						</IonCol>
-					</IonRow>
+                
+                   
             </IonContent>
         </IonPage>
     )

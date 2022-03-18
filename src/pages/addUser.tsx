@@ -1,15 +1,17 @@
 import { IonBackButton, IonButton, IonButtons, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonList, IonPage, IonTitle, IonToolbar, useIonAlert } from "@ionic/react";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 
 const AddUser: React.FC = () => {
     const [present] = useIonAlert();
+    const { t, i18n } = useTranslation();
     return (
         <IonPage>
             <IonHeader>
                 <IonToolbar>
                     <IonToolbar>
-                        <IonTitle>Adicionar Utilizador</IonTitle>
+                        <IonTitle>{t('users.add.Title')}</IonTitle>
                     </IonToolbar>
 
                     <IonButtons slot="start">
@@ -21,10 +23,10 @@ const AddUser: React.FC = () => {
                 <IonGrid>
                 <IonList>
                     <IonItem>
-                        <IonInput placeholder="Username" required></IonInput>
+                        <IonInput placeholder={t('users.add.Username')} required></IonInput>
                     </IonItem>
                     <IonItem>
-                        <IonInput placeholder="Password" type="password"  required></IonInput>
+                        <IonInput placeholder={t('users.add.Password')} type="password"  required></IonInput>
                     </IonItem>
                     <IonButton expand="block" onClick={() =>
                               present({
@@ -36,17 +38,17 @@ const AddUser: React.FC = () => {
                                 ],
                                 onDidDismiss: (e) => console.log('did dismiss'),
                               })
-                            }>Validar Autenticação</IonButton>
+                            }>{t('users.add.Validate')}</IonButton>
                 </IonList>
 
                 <IonList>
                     <IonItem>
-                        <IonInput placeholder="Name"></IonInput>
+                        <IonInput placeholder={t('users.add.Name')}></IonInput>
                     </IonItem>
                     <IonItem>
-                        <IonInput placeholder="PIN de Acesso" type="password" ></IonInput>
+                        <IonInput placeholder={t('users.add.PIN')} type="password" ></IonInput>
                     </IonItem>
-                    <IonButton expand="block">Guardar</IonButton>
+                    <IonButton expand="block">{t('users.add.Save')}</IonButton>
                 </IonList>
                 </IonGrid>
             </IonContent>

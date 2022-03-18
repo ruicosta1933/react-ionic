@@ -1,6 +1,7 @@
 import { IonAvatar, IonButton, IonChip, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { construct, eye, eyeOff, trash } from 'ionicons/icons';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
@@ -8,12 +9,13 @@ const Tab1: React.FC = () => {
 
   const [check, setCheck ] = useState(false)
   const [check1, setCheck1 ] = useState(false)
-
+  const { t, i18n } = useTranslation();
+  
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Occurrences</IonTitle>
+          <IonTitle>{t('occurrences.Title')}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

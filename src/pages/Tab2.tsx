@@ -1,15 +1,18 @@
 import { IonAvatar, IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonPage, IonRow, IonTitle, IonToolbar, useIonAlert } from '@ionic/react';
 import { add, build, personAdd, trash } from 'ionicons/icons';
+import { useTranslation } from 'react-i18next';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
   const [present] = useIonAlert();
+  const { t, i18n } = useTranslation();
+  
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Gestão Utilizadores</IonTitle>
+          <IonTitle>{t('users.Title')}</IonTitle>
           <IonButtons slot="end">
 
 						<IonButton color="dark" href='/addUser'>
@@ -60,7 +63,7 @@ const Tab2: React.FC = () => {
                     <img src="https://cdn.pixabay.com/photo/2017/09/05/15/51/plus-2718200_960_720.png"/>
                 </IonAvatar>
                 <IonLabel>
-                  <h2>Adicionar Utilizador</h2>
+                  <h2>{t('users.AddUser')}</h2>
                 </IonLabel>
                 <IonButton color="dark" href='/addUser'>
 							    <IonIcon icon={ personAdd } />

@@ -41,25 +41,22 @@ import {useTranslation} from 'react-i18next';
 setupIonicReact();
 
 const App: React.FC = () => {
-
+  const { t, i18n } = useTranslation();
   
   return(
 <IonApp>
     <IonReactRouter>
-      
       <IonTabs>
         <IonRouterOutlet>
-        
-        <Route path="/login">
-          <Login />
-        </Route>
-
-        <Route exact path="/">
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
             <Redirect to="/login" />
           </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
+          <Route path="/register" exact>
+            <Register />
+          </Route>
           <Route exact path="/occurrences">
             <Tab1 />
           </Route>
@@ -71,22 +68,22 @@ const App: React.FC = () => {
           </Route>
           <Route path="/addUser" exact >
             <AddUser />
-        </Route>
+          </Route>
         
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/occurrences">
             <IonIcon icon={albums} />
-            <IonLabel>Occurrences</IonLabel>
+            <IonLabel>{t('tabs.Occurrences')}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/users">
             <IonIcon icon={people} />
-            <IonLabel>Utilizadores</IonLabel>
+            <IonLabel>{t('tabs.Users')}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/profile">
             <IonIcon icon={person} />
-            <IonLabel>Profile</IonLabel>
+            <IonLabel>{t('tabs.Profile')}</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

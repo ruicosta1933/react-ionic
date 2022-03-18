@@ -32,7 +32,7 @@ const Tab3: React.FC = () => {
       <IonHeader>
       		<IonToolbar>
 				<IonToolbar>
-					<IonTitle>{t('Title')}</IonTitle>
+					<IonTitle>{t('profile.Title')}</IonTitle>
 					</IonToolbar>
 
 					<IonButtons slot="end">
@@ -67,7 +67,7 @@ const Tab3: React.FC = () => {
 											</IonRow>
                       							<IonButton color="primary" expand="block" fill="outline">
 												<IonIcon icon={ personAddOutline } size="small" />&nbsp;
-												{t('Edit')}
+												{t('profile.Edit')}
 											</IonButton>
 											<IonItem>
 												<IonSelect value={localStorage.getItem('lgn')} okText="Okay" cancelText="Dismiss" onIonChange={e => change(e)} >
@@ -88,12 +88,12 @@ const Tab3: React.FC = () => {
 								<IonCardHeader>
 									<IonRow >
 										<IonIcon />
-										<IonCardTitle>{t('Description')}</IonCardTitle>
+										<IonCardTitle>{t('profile.Description')}</IonCardTitle>
 									</IonRow>
 								</IonCardHeader>
 								<IonCardContent>
 									<IonText>
-										<p>{t('Text')}</p>
+										<p>{t('profile.Text')}</p>
 									</IonText>
 								</IonCardContent>
 							</IonCard>
@@ -106,7 +106,7 @@ const Tab3: React.FC = () => {
 								<IonCardContent>
 									<IonIcon icon={ albumsOutline } />
 									<IonCardTitle>147</IonCardTitle>
-									<IonCardSubtitle>{t('Occurrences')}</IonCardSubtitle>
+									<IonCardSubtitle>{t('profile.Occurrences')}</IonCardSubtitle>
 								</IonCardContent>
 							</IonCard>
 						</IonCol>
@@ -116,7 +116,7 @@ const Tab3: React.FC = () => {
 								<IonCardContent>
 									<IonIcon icon={ bookmarkOutline } />
 									<IonCardTitle>63</IonCardTitle>
-									<IonCardSubtitle>{t('Responded')}</IonCardSubtitle>
+									<IonCardSubtitle>{t('profile.Responded')}</IonCardSubtitle>
 								</IonCardContent>
 							</IonCard>
 						</IonCol>
@@ -127,7 +127,7 @@ const Tab3: React.FC = () => {
 							<IonCard >
 								<IonCardContent>
 									<IonRow className="ion-justify-content-between">
-										<IonCardSubtitle>{t('Latest')}</IonCardSubtitle>
+										<IonCardSubtitle>{t('profile.Latest')}</IonCardSubtitle>
 										<IonIcon icon={ arrowForward } />
 									</IonRow>
 								</IonCardContent>
