@@ -18,19 +18,19 @@ const Login: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent className="ion-padding" fullscreen>
+            <IonGrid> 
+                        <img  src="https://vistapointe.net/images/people-wallpaper-7.jpg" alt="avatar"/>
+          </IonGrid>
+          <IonGrid>
+          
+          </IonGrid>
                 <IonGrid>
                     <IonList>
                         <IonItem>
-                            <IonInput placeholder="Username"></IonInput>
+                        <IonInput type="number" placeholder="PIN"></IonInput>
                         </IonItem>
-                        <IonItem>
-                            <IonInput placeholder="Password"></IonInput>
-                        </IonItem>
-                            <IonButton  expand="block">Login</IonButton>
+                            <IonButton  expand="block">Validate</IonButton>
                     </IonList>
-                    <IonRow className="ion-justify-content-between">
-                            <IonCardSubtitle>Ainda não tem conta ? <a href="/register" >Registe-se</a></IonCardSubtitle>
-                    </IonRow>
                 </IonGrid>
                 
                    
